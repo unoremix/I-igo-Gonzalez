@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata for the browser -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to the CSS stylesheet -->
+    <link rel="stylesheet" href="styles-modified.css">
+
+    <!-- Title of the page -->
+    <title>Student CV</title>
+</head>
+
+<body>
+    <!-- Main container for the CV -->
+    <div id="cv">
+
+        <!-- Student's name and title -->
+        <header>
+            <h1>Jane Doe</h1>
+            <p>Computer Science Student</p>
+        </header>
+
+        <!-- Contact information -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <address>
+                <p>Email: janedoe@example.com</p>
+                <p>Phone: +1234567890</p>
+            </address>
+        </section>
+
+        <!-- Education details -->
+        <section id="education" class="training">
+            <h2>Education</h2>
+            <p>BS in Computer Science, XYZ University, 2023</p>
+        </section>
+
+        <section id="skills" class="training">
+
+            <!-- Here's our h2 element -->
+            <h2 style="background-color: blueviolet; z-index: 2; position: relative;">
+                Skills
+            </h2>
+            <!-- 
+    - The h2 has a z-index of 2.
+    - The z-index property will only have an effect if the element's position value is not 'static' (the default). 
+      That's why we've set its position to 'relative' here.
+    - In the context of sibling elements (like the h2 and ul in our example), the one with the higher z-index will 
+      appear on top if they overlap.
+    -->
+
+            <!-- Here's our ul element -->
+            <ul style="background-color: darkgoldenrod; z-index: 3; position: relative;">
+                <li style="background-color: aqua;">HTML & CSS</li>
+                <li style="background-color: darkcyan;">JavaScript</li>
+                <li>Python</li>
+            </ul>
+            <!-- 
+    - The ul has a z-index of 3, which is higher than the h2's z-index of 2. 
+    - This means that, if the h2 and ul overlap, the ul will appear above the h2.
+    - However, note that z-index only affects the stacking order of elements that are on the same "stacking context". 
+      This means that the z-index values are compared among sibling elements, and not between a parent and its children.
+    - For example, even if a parent element has a very high z-index, its child elements can still be displayed beneath 
+      other elements if those other elements have higher z-index values.
+    - Importantly, child elements are always above their parent in the stacking order if they overlap, regardless of 
+      z-index. This is because they exist within the stacking context established by their parent.
+    -->
+
+        </section>
+        <!-- End of our example section -->
+
+        <!-- Experience -->
+        <section id="experience" class="pro">
+            <h2>Experience</h2>
+            <!-- Each work experience can be an article -->
+            <article>
+                <h3>Intern at ABC Corp</h3>
+                <p>Developed XYZ features.</p>
+            </article>
+        </section>
+    </div>
+</body>
+
+</html>

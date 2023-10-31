@@ -22,6 +22,11 @@ body {
     /* Border around the CV */
 }
 
+.training {
+    background-color: aquamarine;
+    z-index: 3;
+}
+
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -42,6 +47,8 @@ header p {
 
 /* Styling for each section's title */
 h2 {
+    position: relative;
+    top: 125px;
     background-color: #f4f4f4;
     /* Light gray background */
     padding: 10px;
@@ -61,7 +68,7 @@ h2 {
     /* Remove the default bullet points */
 }
 
-#skills li {
+#skills>li {
     background-color: #f9f9f9;
     /* Lighter gray background */
     padding: 5px;
